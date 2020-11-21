@@ -17,7 +17,7 @@ internal class CompatTypefaceSpan(private val font: Typeface?) : MetricAffecting
         update(paint)
     }
 
-    fun update(textPaint: TextPaint?) {
+    private fun update(textPaint: TextPaint?) {
         textPaint?.apply {
             val oldStyle = typeface?.style ?: 0
 
