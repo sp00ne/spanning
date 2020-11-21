@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light" />
+
+    <style name="CustomTextAppearance">
+        <item name="android:fontFamily">@font/raleway_black</item>
+        <item name="android:textColor">@color/purple_500</item>
+    </style>
+</resources>

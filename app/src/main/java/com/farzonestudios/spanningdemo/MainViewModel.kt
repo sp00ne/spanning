@@ -5,6 +5,7 @@ import android.text.SpannableString
 import android.widget.Toast
 import androidx.annotation.ColorInt
 import androidx.annotation.FontRes
+import androidx.annotation.StyleRes
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.farzonestudios.spanning.*
@@ -23,25 +24,35 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             )
             addUnderlineAndStrikethrough()
             addStyleSpans()
-            addCustomFont(R.font.raleway)
+            addCustomFont(R.font.raleway_medium)
             addClickable {
                 Toast.makeText(getApplication(), "I was clicked!", Toast.LENGTH_SHORT)
                     .show()
             }
+            addTextAppearance(R.style.CustomTextAppearance)
         }
 
         data.postValue(listOfExamples)
     }
 
+    private fun MutableList<SpannableString>.addTextAppearance(@StyleRes id: Int) {
+        add(
+            spannable("An actual case, would be to have a custom text appearance load instead") appendSpace
+                    spannable("like this") {
+                        setTextAppearance(getApplication(), id)
+                    }
+        )
+    }
+
     private fun MutableList<SpannableString>.addIncreasedTextSize() {
         add(
-            spannable("Many things are supported, such as increased size in an absolute manner with") appendSpace spannable(
-                "24dp"
-            ) {
-                setTextSizeDp(24)
-            } appendSpace spannable("or relatively by 1.3") {
-                setScale(1.3f)
-            }
+            spannable("Many things are supported, such as increased size in an absolute manner with") appendSpace
+                    spannable("24dp") {
+                        setTextSizeDp(24)
+                    } appendSpace
+                    spannable("or relatively by 1.3") {
+                        setScale(1.3f)
+                    }
         )
     }
 
