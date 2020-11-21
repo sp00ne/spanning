@@ -1,7 +1,16 @@
 # Spanning [![](https://jitpack.io/v/sp00ne/spanning.svg)](https://jitpack.io/#sp00ne/spanning)
 A library to simplify your Spannable usage with many handy extensions
 ## How to get it
-In the `build.gradle` file of your project, include the dependency like so:
+__Step 1__. Add the repository in your root `build.gradle` at the end of repositories:
+```
+  allprojects {
+      repositories {
+          ...
+          maven { url 'https://jitpack.io' }
+      }
+  }
+```
+__Step 2__. In the `build.gradle` file of your module (like `app`), include it like so:
 ```
   dependencies {
       implementation 'com.github.sp00ne:spanning:1.0.0'
