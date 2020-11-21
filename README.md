@@ -3,9 +3,9 @@ A library to simplify your Spannable usage with many handy extensions
 ## How to get it
 In the `build.gradle` file of your project, include the dependency like so:
 ```
-	dependencies {
-	        implementation 'com.github.sp00ne:spanning:0.1.0'
-	}
+  dependencies {
+      implementation 'com.github.sp00ne:spanning:0.1.0'
+  }
 ```
 ## How to use it
 The usage of this library is pretty straight-forward. To start building the spannable, we begin with the simple example of just returing a `SpannedString`:
@@ -16,35 +16,35 @@ If you wish to add Spans to it, you simply open up a block, like so:
 
 ### Single span
 ```
-spannable("some text with candy") {
-  setTextColor(color)
-}
+  spannable("some text with candy") {
+      setTextColor(color)
+  }
 ```
 
 ### Multiple spans
 Which will cause the entire text("some text with candy") to get the text color specified in the block. Spans can also be applied on top of eachother like this:
 ```
-spannable("this has many effects") {
-  setTextColor(color)
-  setUnderline()
-  setStrikethrough()
-}
+  spannable("this has many effects") {
+      setTextColor(color)
+      setUnderline()
+      setStrikethrough()
+  }
 ```
 which results in "this has many effects" being colored, underlined and strikethrough.
 
 ### Appending spans
 If you wish to append multiple spans, there are supported functions for this in the library.
 ```
-spannable(first text") appendSpace spannable("second text")
+  spannable(first text") appendSpace spannable("second text")
 ```
 which simply appends and adds a space character inbetween the two. Resulting in `first text second text` It is also possible for a line break like so:
 ```
-spannable("first text") appendLine spannable("second text on a new line")
+  spannable("first text") appendLine spannable("second text on a new line")
 ```
 results in
 ```
-first text
-second text on a new line
+  first text
+  second text on a new line
 ```
 
 ## What is supported
