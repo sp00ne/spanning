@@ -4,7 +4,7 @@ A library to simplify your Spannable usage with many handy extensions
 In the `build.gradle` file of your project, include the dependency like so:
 ```
   dependencies {
-      implementation 'com.github.sp00ne:spanning:0.1.0'
+      implementation 'com.github.sp00ne:spanning:1.0.0'
   }
 ```
 ## How to use it
