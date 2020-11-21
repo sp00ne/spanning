@@ -69,6 +69,7 @@ Running the demo will showcase what is supported. As of right now there is
 * `setBackgroundColor`
 * `setFont`
 * `setTextAppearance`
+* `setClickable`
 
 ## Demo
 [![](https://i.ibb.co/LpJm2f2/Screenshot-1605967464.png)]
